@@ -63,7 +63,7 @@
     });
 
     function fetchAndRenderResponses() {
-      fetch('http://localhost:3000/api/responses')
+      fetch('https://eleanor-tuitiion.onrender.com/api/responses')
         .then(res => res.json())
         .then(data => {
           // Unactioned first, then actioned (actioned=1)
@@ -91,7 +91,7 @@
           document.querySelectorAll('.action-btn').forEach(btn => {
             btn.addEventListener('click', function() {
               const id = this.getAttribute('data-id');
-              fetch(`http://localhost:3000/api/actioned/${id}`, { method: 'POST' })
+              fetch(`https://eleanor-tuitiion.onrender.com/api/actioned/${id}`, { method: 'POST' })
                 .then(() => fetchAndRenderResponses());
             });
           });
