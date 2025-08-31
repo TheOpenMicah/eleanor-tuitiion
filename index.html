@@ -191,7 +191,7 @@
                 const emailAddress = document.querySelector('input[name="email-address"]').value;
                 const otherContact = document.querySelector('input[name="other-contact"]').value;
                 // Send to backend
-                fetch('http://localhost:3000/api/submit', {
+                fetch('https://eleanor-tuitiion.onrender.com/submit', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
