@@ -2,6 +2,8 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
+app.use(express.static(path.join(__dirname)));
 const app = express();
 const PORT = 3000;
 
